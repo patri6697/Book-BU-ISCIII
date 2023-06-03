@@ -6,14 +6,15 @@
 # c) Mostrar los resultados por pantalla y guardar en un fichero, mostrando cada
 #    nucleótido y su frecuencia.
 
-# !pip install biopython
 # First, we import the library biopython
+# !pip install biopython
+
 from Bio import SeqIO 
 
 # You can either directly introduce the path of your file  in the script or use the program to introduce it.
 # seq = SeqIO.read("C:/Users/my_folder/file.fasta",'fasta')
 
-file = input('Introduce the route of your file, please remove the quotation marks when copying ')
+file = input('Introduce the path of your file, please remove the quotation marks when copying ')
 seq = SeqIO.read(file,'fasta')
 
 print(f'FASTA content: {seq}')
@@ -25,7 +26,7 @@ nucleotide_freq = { 'A':seq.count('A'),
                     'C':seq.count('C'),
                     'G':seq.count('G') }
 
-print (f'The frequence of nucleotides in your sequences are: {nucleotide_freq}')
+print (f'The frequency of nucleotides in your sequence is: {nucleotide_freq}')
 
 # Finally to save our results, let's create a new file and write our results on it
 
